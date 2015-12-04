@@ -1,0 +1,18 @@
+socle-social:
+  image: phpmentors/symfony-app
+  restart: always
+  ports:
+   - "80:80"
+  volumes:
+   - /home/vagrant/www/Symfony2/:/var/app/
+  links:
+   - mysql:mysql
+  container_name: symfony.dev
+mysql:
+  image: mysql
+  restart: always
+  environment:
+   - MYSQL_ROOT_PASSWORD=plop
+  ports:
+   - "3306:3306"
+  container_name: mysql

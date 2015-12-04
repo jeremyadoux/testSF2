@@ -1,4 +1,4 @@
-socle-social:
+symfony:
   image: phpmentors/symfony-app
   restart: always
   ports:
